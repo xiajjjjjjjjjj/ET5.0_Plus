@@ -3,6 +3,7 @@ using ICSharpCode.SharpZipLib.Zip.Compression;
 
 namespace ETModel
 {
+#if SERVER
 	public static class ZipHelper
 	{
 		public static byte[] Compress(byte[] content)
@@ -49,6 +50,7 @@ namespace ETModel
 			}
 		}
 	}
+#endif
 }
 
 /*

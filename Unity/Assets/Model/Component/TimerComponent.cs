@@ -37,6 +37,7 @@ namespace ETModel
 
 		/// <summary>
 		/// key: time, value: timer id
+		/// MultiMap内部有一个自动排序的字典
 		/// </summary>
 		private readonly MultiMap<long, long> timeId = new MultiMap<long, long>();
 
