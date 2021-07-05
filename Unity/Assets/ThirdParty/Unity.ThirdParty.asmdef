@@ -1,0 +1,14 @@
+{
+    "name": "Unity.ThirdParty",
+    "references": [
+        "ILRuntime"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
