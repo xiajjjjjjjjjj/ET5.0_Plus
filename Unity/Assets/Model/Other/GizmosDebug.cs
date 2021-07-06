@@ -12,6 +12,7 @@ namespace ETModel
         private void Awake()
         {
             Instance = this;
+            Path=new List<Vector3>();
         }
 
         private void OnDrawGizmos()

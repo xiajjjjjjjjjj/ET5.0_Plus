@@ -87,7 +87,6 @@ namespace App
 						Game.Scene.AddComponent<ActorLocationSenderComponent>();
 						Game.Scene.AddComponent<MailboxDispatcherComponent>();
 						Game.Scene.AddComponent<ActorMessageDispatcherComponent>();
-						Game.Scene.AddComponent<PathfindingComponent>();
 						break;
 					case AppType.AllServer:
 						
@@ -127,7 +126,8 @@ namespace App
 						Game.Scene.AddComponent<ConfigComponent>();
 						
 						// recast寻路组件
-						Game.Scene.AddComponent<PathfindingComponent>();
+						Game.Scene.AddComponent<RecastPathComponent>();
+						
 						
 						Game.Scene.AddComponent<PlayerComponent>();
 						Game.Scene.AddComponent<UnitComponent>();

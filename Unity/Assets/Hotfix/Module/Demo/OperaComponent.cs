@@ -39,9 +39,10 @@ namespace ETHotfix
         {
             if (Input.GetMouseButtonDown(1))
             {
+	            Log.Debug("按下");
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
-	            if (Physics.Raycast(ray, out hit, 1000, this.mapMask))
+	            if (Physics.Raycast(ray, out hit, 10000, this.mapMask))
 	            {
 					this.ClickPoint = hit.point;
 		            frameClickMap.X = this.ClickPoint.x;
@@ -50,7 +51,8 @@ namespace ETHotfix
 		            ETModel.SessionComponent.Instance.Session.Send(frameClickMap);
 
 					// 测试actor rpc消息
-					this.TestActor().Coroutine();
+					//this.TestActor().Coroutine();
+					Log.Debug(this.ClickPoint.ToString());
 				}
             }
         }

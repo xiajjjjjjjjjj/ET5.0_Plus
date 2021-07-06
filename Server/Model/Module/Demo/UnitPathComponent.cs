@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Threading;
-using PF;
 using UnityEngine;
 
 namespace ETModel
@@ -9,24 +8,10 @@ namespace ETModel
     {
         public Vector3 Target;
 
-        private ABPathWrap abPath;
-        
-        public List<Vector3> Path;
+        public List<Vector3> Path=new List<Vector3>();
 
         public CancellationTokenSource CancellationTokenSource;
-
-        public ABPathWrap ABPath
-        {
-            get
-            {
-                return this.abPath;
-            }
-            set
-            {
-                this.abPath?.Dispose();
-                this.abPath = value;
-            }
-        }
+        
 
         public override void Dispose()
         {
@@ -36,7 +21,7 @@ namespace ETModel
             }
             base.Dispose();
             
-            this.abPath?.Dispose();
+            Path.Clear();
         }
     }
 }

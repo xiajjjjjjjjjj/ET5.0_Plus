@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Threading;
 using ETModel;
-using PF;
 using UnityEngine;
 
 namespace ETHotfix
@@ -39,14 +38,15 @@ namespace ETHotfix
             Unit unit = self.GetParent<Unit>();
             
             
-            PathfindingComponent pathfindingComponent = Game.Scene.GetComponent<PathfindingComponent>();
-            self.ABPath = ComponentFactory.Create<ABPathWrap, Vector3, Vector3>(unit.Position, new Vector3(target.x, target.y, target.z));
-            pathfindingComponent.Search(self.ABPath);
-            Log.Debug($"find result: {self.ABPath.Result.ListToString()}");
+            RecastPathComponent recastPathComponent = Game.Scene.GetComponent<RecastPathComponent>();
+            
+            self.Path.Clear();
+            recastPathComponent.SearchPath(10001, unit.Position, target, self.Path);
+            Log.Debug($"find result: {self.Path.ListToString()}");
             
             self.CancellationTokenSource?.Cancel();
             self.CancellationTokenSource = new CancellationTokenSource();
-            await self.MoveAsync(self.ABPath.Result);
+            await self.MoveAsync(self.Path);
             self.CancellationTokenSource.Dispose();
             self.CancellationTokenSource = null;
         }
@@ -64,11 +64,11 @@ namespace ETHotfix
                 
             for (int i = 0; i < offset; ++i)
             {
-                if (index + i >= self.ABPath.Result.Count)
+                if (index + i >= self.Path.Count)
                 {
                     break;
                 }
-                Vector3 v = self.ABPath.Result[index + i];
+                Vector3 v = self.Path[index + i];
                 m2CPathfindingResult.Xs.Add(v.x);
                 m2CPathfindingResult.Ys.Add(v.y);
                 m2CPathfindingResult.Zs.Add(v.z);

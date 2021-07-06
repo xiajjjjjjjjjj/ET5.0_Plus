@@ -1,6 +1,5 @@
 ﻿using System;
 using ETModel;
-using PF;
 using UnityEngine;
 
 namespace ETHotfix
@@ -13,7 +12,7 @@ namespace ETHotfix
 			Unit unit = ComponentFactory.CreateWithId<Unit>(IdGenerater.GenerateId());
 			unit.AddComponent<MoveComponent>();
 			unit.AddComponent<UnitPathComponent>();
-			unit.Position = new Vector3(-10, 0, -10);
+			unit.Position = new Vector3(0, 0, 0);
 			
 			await unit.AddComponent<MailBoxComponent>().AddLocation();
 			unit.AddComponent<UnitGateComponent, long>(request.GateSessionId);
