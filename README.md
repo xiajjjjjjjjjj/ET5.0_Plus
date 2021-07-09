@@ -1,5 +1,4 @@
 # TT_SmallRPG
-<<<<<<< .merge_file_a31696
 准备做一个小小的RPG项目
 
 ## 基础框架:ET5.0
@@ -20,7 +19,4 @@ Animancer(学习版)
 ## 友链（不分先后）：
 無雙草泥馬:https://github.com/MusouCrow  
 烟雨迷离半世殇:https://gitee.com/NKG_admin
-=======
-一个小小的RPG项目，基于ET5.0
->>>>>>> .merge_file_a31416
 
