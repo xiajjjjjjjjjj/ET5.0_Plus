@@ -31105,6 +31105,7 @@ Transform:
   - {fileID: 1786649384}
   - {fileID: 158362230}
   - {fileID: 554386188}
+  - {fileID: 1667521769}
   - {fileID: 2005706564}
   - {fileID: 472446095}
   - {fileID: 2038668270}
@@ -31126,7 +31127,6 @@ Transform:
   - {fileID: 1774794845}
   - {fileID: 1723703841}
   - {fileID: 1921520834}
-  - {fileID: 1667521769}
   - {fileID: 128820717}
   - {fileID: 1582593276}
   - {fileID: 373608978}
@@ -61285,7 +61285,7 @@ Transform:
   m_Children:
   - {fileID: 1013331}
   m_Father: {fileID: 855539047}
-  m_RootOrder: 351
+  m_RootOrder: 330
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1670433389
 PrefabInstance:
