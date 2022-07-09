@@ -1,5 +1,6 @@
-# TT_SmallRPG
-准备做一个小小的RPG项目
+# 目的
+留一个ET5.0版本备用
+基于ET5.0做一些补充
 
 ## 基础框架ET5.0
 ET地址：https://github.com/egametang/ET
@@ -12,9 +13,6 @@ Animancer(学习版)
 
 ## 引用文章:
 接入Recastnavigation寻路到ET5.0：https://www.lfzxb.top/cpp-recastnavigation-to-unity-or-server/
-
-## 借鉴项目：
-致敬LOL的Moba游戏：https://gitee.com/NKG_admin/NKGMobaBasedOnET
 
 ## 友链（不分先后）：
 無雙草泥馬：https://github.com/MusouCrow  
